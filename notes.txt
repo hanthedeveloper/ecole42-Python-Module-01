@@ -1,0 +1,12 @@
+nutri = 0
+
+loop = 0
+
+def age:
+    loop |= 0b1
+    if loop ==3
+        nutri +=1
+def grow:
+    loop |=2
+    if loop ==3
+        nutri +=1
