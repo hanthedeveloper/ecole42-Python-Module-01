@@ -40,10 +40,10 @@ class Flower(Plant):
     def __init__(self, name: str, height: float, age: int, color: str) -> None:
         super().__init__(name, height, age)
         self.color = color
-        self._bloomed = False  # état interne : a-t-elle déjà fleuri ?
+        self._bloomed = False 
 
     def show(self) -> None:
-        super().show()  # IMPORTANT : super() suivi de () sinon ça ne marche pas
+        super().show()
         print(f" Color: {self.color}")
         if self._bloomed:
             print(f" {self.name} is blooming beautifully!")
@@ -61,8 +61,6 @@ class Tree(Plant):
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
-    # ATTENTION : show() et produce_shade() doivent être au même niveau
-    # d'indentation que __init__, pas imbriqués DEDANS __init__ !
     def show(self) -> None:
         super().show()
         print(f" Trunk diameter: {self.trunk_diameter}cm")
@@ -80,7 +78,7 @@ class Vegetable(Plant):
     ) -> None:
         super().__init__(name, height, age)
         self.harvest_season = harvest_season
-        self.nutritional_value = 0  # un seul nom, ni deux (attribut + méthode)
+        self.nutritional_value = 0
 
     def grow(self, rate: float = 1.0) -> None:
         super().grow(rate)
