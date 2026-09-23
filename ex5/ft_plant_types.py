@@ -30,8 +30,14 @@ class Plant:
         print(f"{self.name}: {self.get_height()}cm, {self.get_age()} days old")
 
 class Flower(Plant):
-	def __init__(self, name: str, age: int, height: int):
+	def __init__(self, name: str, height: float, age: int, color: str) -> None:
 		super().__init__(name, age, height)
+        self.color = color
+    def show(self):
+        super.show()
+        print(f" Color: {self.color}")
+    def bloom(self):
+
 
 class Tree(Plant):
 
